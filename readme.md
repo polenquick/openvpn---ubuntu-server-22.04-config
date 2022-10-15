@@ -11,10 +11,10 @@
 <code>cd./easyrsa sign-req server myservername</code><br>
 <code>cp pki/dh.pem pki/ca.crt pki/issued/yourservername.crt pki/private/yourservername.key /etc/openvpn/ </code>
 
-//advanced server conf <br>
-<code>sudo cp /usr/share/doc/openvpn/examples/sample-config-files/yourservername.conf /etc/openvpn/yourservername.conf</code>
-<br><br>
-Edit /etc/openvpn/yourservername.conf to make sure the following lines are pointing to the certificates and keys you created in the section above.
+<h2>advanced server conf </h2><br>
+<code> cp /usr/share/doc/openvpn/examples/sample-config-files/yourservername.conf /etc/openvpn/yourservername.conf</code><br><br>
+Edit /etc/openvpn/yourservername.conf to make sure the following lines are pointing to the certificates and keys you created in the section above.<br>
+
 ```
 server.conf
 local YOUR_SERVER_IP
@@ -91,7 +91,6 @@ Now u can start your openvpn client <br>
 <code>systemctl start openvpn@client</code><br>
 You will find logging and error messages in the journal <br>
 <code>journalctl -xeu openvpn@client</code>
-systemctl start openvpn@client
 
 Now copy yourclientname.crt & yourclientname.key from server to your desktop <br>
 U can use programs like WINSCP on windows and next import to OPENVPN
@@ -100,3 +99,5 @@ u'll be need root permision or type
 chmod +rwx yourclientname.crt
 chmod +rwx yourclientname.key
 ```
+![openvpn_1](https://user-images.githubusercontent.com/15954857/195981440-521859c6-3cff-4694-a163-dbe48b8fd8d0.jpg)
+
