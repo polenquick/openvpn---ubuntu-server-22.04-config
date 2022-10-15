@@ -8,7 +8,7 @@
 <code>cd./easyrsa build-ca</code><br>
 <code>cd./easyrsa gen-req yourservername nopass</code><br>
 <code>cd./easyrsa gen-dh</code><br>
-<code>cd./easyrsa sign-req server myservername</code><br>
+<code>cd./easyrsa sign-req server yourservername</code><br>
 <code>cp pki/dh.pem pki/ca.crt pki/issued/yourservername.crt pki/private/yourservername.key /etc/openvpn/ </code>
 
 <h2>advanced server conf </h2><br>
